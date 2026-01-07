@@ -13,14 +13,9 @@
 
   <meta name="robots" content="index,follow" />
 
-  <!-- AMP Runtime -->
   <script async src="https://cdn.ampproject.org/v0.js"></script>
+  <script async custom-element="amp-story" src="https://cdn.ampproject.org/v0/amp-story-1.0.js"></script>
 
-  <!-- AMP Story Component -->
-  <script async custom-element="amp-story"
-          src="https://cdn.ampproject.org/v0/amp-story-1.0.js"></script>
-
-  <!-- REQUIRED AMP BOILERPLATE -->
   <style amp-boilerplate>
     body {
       -webkit-animation: -amp-start 8s steps(1,end) 0s 1 normal both;
@@ -28,45 +23,36 @@
       -ms-animation: -amp-start 8s steps(1,end) 0s 1 normal both;
       animation: -amp-start 8s steps(1,end) 0s 1 normal both;
     }
-    @-webkit-keyframes -amp-start { from { visibility: hidden } to { visibility: visible } }
-    @-moz-keyframes -amp-start { from { visibility: hidden } to { visibility: visible } }
-    @-ms-keyframes -amp-start { from { visibility: hidden } to { visibility: visible } }
-    @-o-keyframes -amp-start { from { visibility: hidden } to { visibility: visible } }
-    @keyframes -amp-start { from { visibility: hidden } to { visibility: visible } }
+    @-webkit-keyframes -amp-start { from { visibility:hidden } to { visibility:visible } }
+    @-moz-keyframes -amp-start { from { visibility:hidden } to { visibility:visible } }
+    @-ms-keyframes -amp-start { from { visibility:hidden } to { visibility:visible } }
+    @-o-keyframes -amp-start { from { visibility:hidden } to { visibility:visible } }
+    @keyframes -amp-start { from { visibility:hidden } to { visibility:visible } }
   </style>
+
   <noscript>
     <style amp-boilerplate>
       body {
-        -webkit-animation: none;
-        -moz-animation: none;
-        -ms-animation: none;
-        animation: none;
+        -webkit-animation:none;
+        -moz-animation:none;
+        -ms-animation:none;
+        animation:none;
       }
     </style>
   </noscript>
 
-  <!-- CUSTOM STYLE -->
   <style amp-custom>
     amp-story {
       font-family: Arial, Helvetica, sans-serif;
       color: #ffffff;
     }
     .overlay {
-      background: linear-gradient(
-        to bottom,
-        rgba(0,0,0,0.35),
-        rgba(0,0,0,0.85)
-      );
+      background: linear-gradient(to bottom,
+      rgba(0,0,0,0.35),
+      rgba(0,0,0,0.85));
     }
-    h1, h2 {
-      font-weight: 700;
-      line-height: 1.25;
-    }
-    p {
-      font-size: 1.05rem;
-      line-height: 1.5;
-      margin-top: 8px;
-    }
+    h1, h2 { font-weight: 700; line-height: 1.25; }
+    p { font-size: 1.05rem; line-height: 1.5; margin-top: 8px; }
   </style>
 </head>
 
@@ -74,118 +60,79 @@
 
 <amp-story
   title="Fed Rate Cuts 2026: Why Life Still Feels Expensive"
-  publisher="Fincalconline"
-  publisher-logo-src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEirWEkZfeUufcHpzcWma0u-C7rSU5bZIwpV3dIAe6SAfxesz2cRqIoQozZEPznyvxcL9XBdIpSuxzB5z1wAQzTuj_QFn1qkDTLdc1OKp2fEGxKiDd7LpMCebfPYuvw6w33jKdWnMKefVc7asp9DXWmXb5yq6RgeLhELthgtp-zQ856VXUg/s1600/fincalcoline.jpg"
+  publisher="Your Finance Blog"
+  publisher-logo-src="https://fincalconline.online/logo96.png"
   poster-portrait-src="https://images.unsplash.com/photo-1580519542036-c47de6196ba5">
 
   <!-- PAGE 1 -->
   <amp-story-page id="p1">
     <amp-story-grid-layer template="fill">
-      <amp-img
-        src="https://images.unsplash.com/photo-1601597111158-2fceff292cdc"
-        width="720" height="1280" layout="responsive"
-        alt="US cost of living pressure 2026">
-      </amp-img>
+      <amp-img src="https://images.unsplash.com/photo-1601597111158-2fceff292cdc"
+               width="720" height="1280" layout="responsive"></amp-img>
     </amp-story-grid-layer>
 
     <amp-story-grid-layer template="vertical" class="overlay">
       <h1>Rates Are Falling 📉</h1>
       <h2>So Why Does Life Still Feel Expensive?</h2>
-      <p>
-        The Federal Reserve cut interest rates in 2026 —  
-        but for most Americans, everyday expenses still feel heavy.
-      </p>
+      <p>The Federal Reserve cut interest rates in 2026 — but everyday expenses still feel heavy.</p>
     </amp-story-grid-layer>
   </amp-story-page>
 
   <!-- PAGE 2 -->
   <amp-story-page id="p2">
     <amp-story-grid-layer template="fill">
-      <amp-img
-        src="https://images.unsplash.com/photo-1554224155-6726b3ff858f"
-        width="720" height="1280" layout="responsive"
-        alt="Federal Reserve interest rate policy">
-      </amp-img>
+      <amp-img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f"
+               width="720" height="1280" layout="responsive"></amp-img>
     </amp-story-grid-layer>
 
     <amp-story-grid-layer template="vertical" class="overlay">
       <h2>What Rate Cuts Actually Do</h2>
-      <p>
-        Lower interest rates help borrowing, markets,
-        and long-term economic growth.
-      </p>
-      <p>
-        They do <strong>not</strong> instantly reduce rent,
-        grocery bills, or insurance costs.
-      </p>
+      <p>Lower rates help borrowing and markets — but not rent or groceries.</p>
     </amp-story-grid-layer>
   </amp-story-page>
 
   <!-- PAGE 3 -->
   <amp-story-page id="p3">
     <amp-story-grid-layer template="fill">
-      <amp-img
-        src="https://images.unsplash.com/photo-1542228262-3d663b306a53"
-        width="720" height="1280" layout="responsive"
-        alt="Rising rent groceries insurance USA">
-      </amp-img>
+      <amp-img src="https://images.unsplash.com/photo-1542228262-3d663b306a53"
+               width="720" height="1280" layout="responsive"></amp-img>
     </amp-story-grid-layer>
 
     <amp-story-grid-layer template="vertical" class="overlay">
-      <h2>The Real Issue: Personal Inflation</h2>
-      <p>
-        Housing, groceries, insurance, subscriptions — these core expenses are rising faster than wages.
-      </p>
-      <p>
-        That’s why inflation feels worse than official headlines.
-      </p>
+      <h2>Personal Inflation</h2>
+      <p>Housing & groceries are rising faster than wages — that’s the real inflation.</p>
     </amp-story-grid-layer>
   </amp-story-page>
 
   <!-- PAGE 4 -->
   <amp-story-page id="p4">
     <amp-story-grid-layer template="fill">
-      <amp-img
-        src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e"
-        width="720" height="1280" layout="responsive"
-        alt="Tracking monthly expenses personal finance">
-      </amp-img>
+      <amp-img src="https://images.unsplash.com/photo-1579621970563-ebec7560ff3e"
+               width="720" height="1280" layout="responsive"></amp-img>
     </amp-story-grid-layer>
 
     <amp-story-grid-layer template="vertical" class="overlay">
-      <h2>The Mistake Most People Make</h2>
-      <p>
-        People follow CPI numbers, but never track their own monthly spending.
-      </p>
-      <p>
-        Income grows — financial freedom doesn’t.
-      </p>
+      <h2>The Mistake</h2>
+      <p>People track CPI but ignore personal spending.</p>
     </amp-story-grid-layer>
   </amp-story-page>
 
   <!-- PAGE 5 -->
   <amp-story-page id="p5">
     <amp-story-grid-layer template="fill">
-      <amp-img
-        src="https://images.unsplash.com/photo-1553729459-efe14ef6055d"
-        width="720" height="1280" layout="responsive"
-        alt="Smart money planning USA 2026">
-      </amp-img>
+      <amp-img src="https://images.unsplash.com/photo-1553729459-efe14ef6055d"
+               width="720" height="1280" layout="responsive"></amp-img>
     </amp-story-grid-layer>
 
     <amp-story-grid-layer template="vertical" class="overlay">
-      <h2>The Smart Money Shift for 2026 💡</h2>
-      <p>✔ Track your real monthly costs</p>
-      <p>✔ Control lifestyle creep</p>
-      <p>✔ Plan beyond economic headlines</p>
+      <h2>The Smart Shift</h2>
+      <p>Track real expenses, avoid lifestyle creep.</p>
     </amp-story-grid-layer>
 
-    <!-- VALID AMP OUTLINK -->
+    <!-- FIXED OUTLINK -->
     <amp-story-page-outlink
       layout="nodisplay"
-      theme="dark"
-      cta-text="Read the full breakdown & action plan"
-      href="https://fincalconline.online/fed-rates-cut.html">
+      href="https://fincalconline.online/fed-rate-cut.html">
     </amp-story-page-outlink>
 
   </amp-story-page>
