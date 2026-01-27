@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Web Insights | Stories & Articles</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-main: #1a1a1a;
+            --text-muted: #666666;
+            --accent: #000000;
+            --btn-bg: #1a1a1a;
+            --btn-hover: #444444;
+            --card-shadow: 0 4px 15px rgba(0,0,0,0.05);
+        }
+
+        body {
+            margin: 0;
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+        }
+
+        /* --- HEADER --- */
+        header {
+            padding: 20px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid #eee;
+            position: sticky;
+            top: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+        }
+
+        .logo {
+            font-family: 'Playfair Display', serif;
+            font-size: 30px;
+            font-weight: 700;
+            letter-spacing: -1px;
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-link {
+            text-decoration: none;
+            color: var(--text-muted);
+            font-weight: 400;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        .nav-link:hover { color: var(--accent); }
+
+        .btn-start {
+            background: var(--btn-bg);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .btn-start:hover { background: var(--btn-hover); }
+
+        /* --- SECTION HEADERS --- */
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+            border-left: 4px solid var(--accent);
+            padding-left: 15px;
+        }
+
+        .section-header h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 28px;
+            margin: 0;
+        }
+
+        .btn-view-all {
+            padding: 8px 18px;
+            border: 1px solid var(--accent);
+            border-radius: 20px;
+            text-decoration: none;
+            color: var(--accent);
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        /* --- WEB STORIES SECTION --- */
+        .web-stories-box {
+            padding: 40px 8%;
+            background: #fafafa;
+        }
+
+        .stories-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 20px;
+        }
+
+        .story-item {
+            position: relative;
+            height: 280px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            transition: transform 0.3s;
+            text-decoration: none;
+        }
+
+        .story-item:hover { transform: translateY(-5px); }
+
+        .story-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .story-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0,0,0,0.8));
+            padding: 15px;
+            color: white;
+        }
+
+        .story-overlay p {
+            margin: 0;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 1.2;
+        }
+
+        /* --- BLOG SECTION --- */
+        .blog-section {
+            padding: 60px 8%;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 60px;
+        }
+
+        .article-list { display: flex; flex-direction: column; gap: 40px; }
+
+        .article-card {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 25px;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .article-img {
+            width: 100%;
+            height: 180px;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+
+        .article-info h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 22px;
+            margin: 0 0 10px 0;
+        }
+
+        .article-info p {
+            color: var(--text-muted);
+            font-size: 15px;
+            margin-bottom: 15px;
+        }
+
+        .tag {
+            background: #f2f2f2;
+            padding: 4px 12px;
+            border-radius: 15px;
+            font-size: 12px;
+            color: #555;
+        }
+
+        /* --- SIDEBAR --- */
+        .sidebar-box {
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+
+        .footer-mini {
+            margin-top: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .footer-mini a {
+            font-size: 13px;
+            color: var(--text-muted);
+            text-decoration: none;
+        }
+
+        /* --- MOBILE --- */
+        @media (max-width: 768px) {
+            .blog-section { grid-template-columns: 1fr; }
+            .article-card { grid-template-columns: 1fr; }
+            .nav-menu { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <a href="/" class="logo">Insight.</a>
+    <div class="nav-menu">
+        <a href="#" class="nav-link">Home</a>
+        <a href="#" class="nav-link">Articles</a>
+        <a href="#" class="nav-link">Web Stories</a>
+        <a href="#" class="nav-link">Newsletter</a>
+    </div>
+    <a href="#" class="btn-start">Get Started</a>
+</header>
+
+<section class="web-stories-box">
+    <div class="section-header">
+        <h2>Visual Stories</h2>
+        <a href="#" class="btn-view-all">View All Stories</a>
+    </div>
+    <div class="stories-grid">
+        <a href="#" class="story-item">
+            <img src="https://images.unsplash.com/photo-1502945015378-0e284ca1a5be?w=400" alt="S1">
+            <div class="story-overlay"><p>Future of Web Hosting in 2026</p></div>
+        </a>
+        <a href="#" class="story-item">
+            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=400" alt="S2">
+            <div class="story-overlay"><p>How to Scale Your Blog Fast</p></div>
+        </a>
+        <a href="#" class="story-item">
+            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400" alt="S3">
+            <div class="story-overlay"><p>AdSense Approval Secrets</p></div>
+        </a>
+        <a href="#" class="story-item">
+            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=400" alt="S4">
+            <div class="story-overlay"><p>CSS Tricks for Modern UI</p></div>
+        </a>
+        <a href="#" class="story-item">
+            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=400" alt="S4">
+            <div class="story-overlay"><p>CSS Tricks for Modern UI</p></div>
+        </a>
+        <a href="#" class="story-item">
+            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=400" alt="S4">
+            <div class="story-overlay"><p>CSS Tricks for Modern UI</p></div>
+        </a>
+        <a href="#" class="story-item">
+            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=400" alt="S4">
+            <div class="story-overlay"><p>CSS Tricks for Modern UI</p></div>
+        </a>
+        <a href="#" class="story-item">
+            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=400" alt="S4">
+            <div class="story-overlay"><p>CSS Tricks for Modern UI</p></div>
+        </a>
+        <a href="#" class="story-item">
+            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=400" alt="S4">
+            <div class="story-overlay"><p>CSS Tricks for Modern UI</p></div>
+        </a>
+        
+    </div>
+</section>
+
+<div class="blog-section">
+    <div class="article-list">
+        <div class="section-header">
+            <h2>Latest Insights</h2>
+        </div>
+        
+        <a href="#" class="article-card">
+            <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=500" class="article-img">
+            <div class="article-info">
+                <span class="tag">Strategy</span>
+                <h3>The 21-Day Content Sprint for AdSense Approval</h3>
+                <p>Consistent publishing is the key to winning Google's trust. Here is how you can achieve it...</p>
+                <div style="font-size: 12px; color: #999;">Jan 17 · 6 min read</div>
+            </div>
+        </a>
+
+        <a href="#" class="article-card">
+            <img src="https://images.unsplash.com/photo-1432821596592-e2c18b78144f?w=500" class="article-img">
+            <div class="article-info">
+                <span class="tag">Technical</span>
+                <h3>Why Cloudflare Pages is a Game Changer</h3>
+                <p>Forget about bandwidth limits and server costs. Explore the power of unlimited edge hosting...</p>
+                <div style="font-size: 12px; color: #999;">Jan 16 · 4 min read</div>
+            </div>
+        </a>
+    </div>
+
+    <aside class="sidebar-box">
+        <h3>Recommended for you</h3>
+        <div style="display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 30px;">
+            <a href="#" class="tag">SEO</a>
+            <a href="#" class="tag">Web Stories</a>
+            <a href="#" class="tag">Coding</a>
+            <a href="#" class="tag">Finance</a>
+        </div>
+        <hr color="#eee">
+        <div class="footer-mini">
+            <a href="#">Privacy Policy</a>
+            <a href="#">About Us</a>
+            <a href="#">Terms</a>
+            <a href="#">Contact</a>
+        </div>
+    </aside>
+</div>
+
+</body>
+</html>
